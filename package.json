@@ -7,10 +7,10 @@
     "@svgr/webpack": "4.3.2",
     "@types/jest": "24.0.19",
     "@types/node": "12.11.1",
-    "@types/react": "16.9.9",
+    "@types/react": "^16.9.9",
     "@types/react-dom": "16.9.2",
-    "@typescript-eslint/eslint-plugin": "^2.2.0",
-    "@typescript-eslint/parser": "^2.2.0",
+    "@typescript-eslint/eslint-plugin": "^2.4.0",
+    "@typescript-eslint/parser": "^2.4.0",
     "babel-eslint": "10.0.3",
     "babel-jest": "^24.9.0",
     "babel-loader": "8.0.6",
@@ -26,9 +26,9 @@
     "eslint-loader": "3.0.2",
     "eslint-plugin-flowtype": "3.13.0",
     "eslint-plugin-import": "2.18.2",
-    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "7.14.3",
-    "eslint-plugin-react-hooks": "^1.6.1",
+    "eslint-plugin-react-hooks": "^2.1.2",
     "file-loader": "3.0.1",
     "fs-extra": "7.0.1",
     "html-webpack-plugin": "4.0.0-beta.5",
@@ -67,7 +67,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "lint": "eslint 'src/**/*.{ts,tsx}'"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -136,5 +137,11 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "^1.18.2"
   }
 }

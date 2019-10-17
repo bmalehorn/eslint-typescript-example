@@ -1,12 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useEffect, useRef } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
-const App: React.FC = () => {
+const App: React.FC<{ foo: boolean }> = ({ foo }) => {
+  const bar = useRef<boolean>(false);
+  if (foo) {
+    useEffect(() => {});
+  }
+  useEffect(() => {}, [bar.current]);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} className="App-logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -21,6 +28,6 @@ const App: React.FC = () => {
       </header>
     </div>
   );
-}
+};
 
 export default App;
